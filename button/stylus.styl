@@ -1,0 +1,243 @@
+
+average-color()
+  r = 0
+  g = 0
+  b = 0
+  for arg in arguments
+    r = r + red(arg)
+    g = g + green(arg)
+    b = b + blue(arg)
+  r = round(r / length(arguments), 0)
+  g = round(g / length(arguments), 0)
+  b = round(b / length(arguments), 0)
+  return rgb(r, g, b)
+
+upper-3rd-color(low, high)
+  r = round(red(high) - ((red(high) - red(low)) / 3), 0)
+  g = round(green(high) - ((green(high) - green(low)) / 3), 0)
+  b = round(blue(high) - ((blue(high) - blue(low)) / 3), 0)
+  return rgb(r, g, b)
+
+lower-3rd-color(low, high)
+  r = round(red(low) + ((red(high) - red(low)) / 3), 0)
+  g = round(green(low) + ((green(high) - green(low)) / 3), 0)
+  b = round(blue(low) + ((blue(high) - blue(low)) / 3), 0)
+  return rgb(r, g, b)
+
+minus-17-color(clr)
+  return rgb(red(clr) - 17, green(clr) - 17, blue(clr) - 17)
+
+plus-17-color(clr)
+  return rgb(red(clr) + 17, green(clr) + 17, blue(clr) + 17)
+  
+btn-radius = 5px
+
+btn-main-light  = #ffffff
+btn-main-dark   = #cccccc
+btn-main-3rd    = upper-3rd-color(btn-main-dark, btn-main-light)
+btn-main-border = #cccccc
+btn-main-font   = #333333
+
+btn-color-font    = #ffffff
+btn-disabled-font = #999999
+
+btn-invert-light = #333333
+btn-invert-dark  = #000000
+btn-invert-3rd   = upper-3rd-color(btn-invert-dark, btn-invert-light)
+
+btn-accent-light = #6666ff
+btn-accent-dark  = #333399
+btn-accent-3rd   = upper-3rd-color(btn-accent-dark, btn-accent-light)
+
+btn-notice-light = #ffcc66
+btn-notice-dark  = #996633
+btn-notice-3rd   = upper-3rd-color(btn-notice-dark, btn-notice-light)
+
+btn-accept-light = #33cc33
+btn-accept-dark  = #006600
+btn-accept-3rd   = upper-3rd-color(btn-accept-dark, btn-accept-light)
+
+btn-escape-light = #cc3333
+btn-escape-dark  = #660000
+btn-escape-3rd   = upper-3rd-color(btn-escape-dark, btn-escape-light)
+
+button
+.button
+input[type=button], input[type=reset], input[type=submit]
+  background-color: btn-main-3rd
+  background-image: linear-gradient(0deg, 
+    btn-main-3rd,
+    btn-main-light)
+  border: 1px solid btn-main-border
+  border-radius: btn-radius
+  box-sizing: border-box
+  color: btn-main-font
+  display: inline-block
+  font-family: inherit
+  font-size: 0.9em
+  font-weight: bold
+  line-height: 1em
+  margin: 0
+  outline: 0
+  padding: 0.5em 1em
+  text-align: center
+  text-decoration: none
+  text-shadow: 0 1px 0 btn-main-light
+  transition: background 0.2s
+  &:hover
+    background-color: minus-17-color(btn-main-3rd)
+    background-image: linear-gradient(0deg,
+      minus-17-color(btn-main-3rd),
+      btn-main-3rd 30%,
+      btn-main-light)
+    cursor: pointer
+  &:active
+    background-color: btn-main-3rd
+    background-image: linear-gradient(180deg,
+      minus-17-color(btn-main-3rd),
+      btn-main-3rd 30%,
+      btn-main-light)
+    transition: background 0s
+  
+  // Colors
+  for clr in (accent notice accept escape)
+    &.{clr}
+      background-color: lookup('btn-' + clr + '-3rd')
+      background-image: linear-gradient(0deg,
+        lookup('btn-' + clr + '-3rd'),
+        lookup('btn-' + clr + '-light'))
+      border-color: lookup('btn-' + clr + '-3rd')
+      color: btn-color-font
+      text-shadow: 0 1px 0 lookup('btn-' + clr + '-dark')
+      &:hover
+        background-color: minus-17-color(lookup('btn-' + clr + '-3rd'))
+        background-image: linear-gradient(0deg,
+          minus-17-color(lookup('btn-' + clr + '-3rd')),
+          lookup('btn-' + clr + '-3rd') 30%,
+          lookup('btn-' + clr + '-light'))
+      &:active
+        background-color: lookup('btn-' + clr + '-3rd')
+        background-image: linear-gradient(180deg,
+          minus-17-color(lookup('btn-' + clr + '-3rd')),
+          lookup('btn-' + clr + '-3rd') 30%,
+          lookup('btn-' + clr + '-light'))
+  
+  // Inverted
+  &.invert
+    background-color: btn-main-3rd
+    background-image: linear-gradient(0deg,
+      btn-main-3rd,
+      btn-main-light)
+    color: btn-main-font
+    text-shadow: 0 1px 0 btn-main-light
+    &:hover
+      background-color: minus-17-color(btn-main-3rd)
+      background-image: linear-gradient(0deg,
+        minus-17-color(btn-main-3rd),
+        btn-main-3rd 30%,
+        btn-main-light)
+    &:active
+      background-color: btn-main-3rd
+      background-image: linear-gradient(180deg,
+        minus-17-color(btn-main-3rd),
+        btn-main-3rd 30%,
+        btn-main-light)
+        
+  &.invert:not(.accent):not(.notice):not(.accept):not(.escape)
+    background-color: btn-invert-3rd
+    background-image: linear-gradient(0deg,
+      btn-invert-3rd,
+      btn-invert-light)
+    border-color: btn-invert-light
+    color: minus-17-color(btn-main-light)
+    text-shadow: 0 1px 0 plus-17-color(btn-invert-dark)
+    &:hover
+      background-color: plus-17-color(plus-17-color(btn-invert-light))
+      background-image: linear-gradient(0deg,
+        plus-17-color(btn-invert-light),
+        plus-17-color(plus-17-color(btn-invert-light)) 30%,
+        plus-17-color(plus-17-color(plus-17-color(btn-invert-light))))
+    &:active
+      background-color: btn-invert-light
+      background-image: linear-gradient(180deg,
+        plus-17-color(btn-invert-light),
+        plus-17-color(plus-17-color(btn-invert-light)) 30%,
+        plus-17-color(plus-17-color(plus-17-color(btn-invert-light))))
+  
+  for clr in (accent notice accept escape)
+    &.{clr}.invert
+      color: lookup('btn-' + clr + '-3rd')
+
+  // Disabled
+  &[disabled]
+  &.disabled
+    background-color: btn-main-3rd !important
+    background-image: linear-gradient(0deg, btn-main-dark, btn-main-light) !important
+    background-image: linear-gradient(0deg,
+      btn-main-3rd,
+      btn-main-light) !important
+    color: btn-disabled-font !important
+    cursor: default !important
+    text-shadow: 0 1px 0 btn-main-light !important
+  
+  // Flat, must follow disabled
+  &.flat
+    background-image: none !important
+    text-shadow: none !important
+  
+  // Shape and grouped
+  &.round
+    border-radius: 1em
+    height: 2em
+    line-height: 0
+    padding: 0.5em 0
+    text-align: center
+    width: 2em
+    overflow: hidden
+  
+  &.pill
+    border-radius: 1em
+  
+  &.square
+  /.group &:not(:first-child):not(:last-child)
+    border-radius: 0
+
+  /.group
+    display: inline-table
+  
+  /.group &
+    display: table-cell
+    border-color: btn-main-border !important
+    border-right-width: 0
+    &:first-child
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+    &:last-child
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      border-right-width: 1px
+  
+  // Sizes
+  &.smallest
+  /.group.smallest > *
+    font-size: 0.5em;
+  
+  &.smaller
+  /.group.smaller > *
+    font-size: 0.6em;
+  
+  &.small
+  /.group.small > *
+    font-size: 0.75em;
+  
+  &.large
+  /.group.large > *
+    font-size: 1.2em;
+  
+  &.larger
+  /.group.larger > *
+    font-size: 1.6em;
+  
+  &.largest
+  /.group.largest > *
+    font-size: 2em;

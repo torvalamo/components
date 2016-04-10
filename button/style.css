@@ -1,0 +1,270 @@
+
+
+body {
+  font-size: 16px;
+  font-family: Helvetica;
+}
+
+h1 {
+  font-size: 1.3em;
+}
+
+/**
+ * Reset
+ */
+
+button, .button, 
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #eeeeee;
+  background-image: linear-gradient(0deg, #eeeeee, #ffffff);
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #333333;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0;
+  outline: 0;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+  transition: background 0.5s;
+}
+
+button:hover, .button:hover {
+  background-color: #dddddd;
+  background-image: linear-gradient(0deg, #dddddd, #eeeeee 30%, #ffffff);
+  cursor: pointer;
+}
+
+button:active, .button:active {
+  background-color: #eeeeee;
+  background-image: linear-gradient(180deg, #dddddd, #eeeeee 30%, #ffffff);
+}
+
+/**
+ * Importance
+ */
+
+button.accent {
+  background-color: #2222aa;
+  background-image: linear-gradient(0deg, #2222aa, #3333cc);
+  border-color: #2222aa;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #000066;
+}
+
+button.accent:hover {
+  background-color: #111199;
+  background-image: linear-gradient(0deg, #111199, #2222aa 30%, #3333cc);
+}
+
+button.accent:active {
+  background-color: #2222aa;
+  background-image: linear-gradient(180deg, #111199, #2222aa 30%, #3333cc);
+}
+
+button.notice {
+  background-color: #cc9922;
+  /*background-image: linear-gradient(0deg, #cf7456, #f39947);*/
+  background-image: linear-gradient(0deg, #cc9922, #ffcc33);
+  border-color: #cc9922;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #663300;
+}
+
+button.notice:hover {
+  background-color: #bb8811;
+  background-image: linear-gradient(0deg, #bb8811, #cc9922 30%, #ffcc33);
+}
+
+button.notice:active {
+  background-color: #cc9922;
+  background-image: linear-gradient(180deg, #bb8811, #cc9922 30%, #ffcc33);
+}
+
+button.accept {
+  background-color: #22aa22;
+  background-image: linear-gradient(0deg, #22aa22, #33cc33);
+  border-color: #22aa22;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #006600;
+}
+
+button.accept:hover {
+  background-color: #119911;
+  background-image: linear-gradient(0deg, #119911, #22aa22 30%, #33cc33);
+}
+
+button.accept:active {
+  background-color: #22aa22;
+  background-image: linear-gradient(180deg, #119911, #22aa22 30%, #33cc33);
+}
+
+button.escape {
+  background-color: #aa2222;
+  background-image: linear-gradient(0deg, #aa2222, #cc3333);
+  border-color: #bb2222;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #660000;
+}
+
+button.escape:hover {
+  background-color: #991111;
+  background-image: linear-gradient(0deg, #991111, #aa2222 30%, #cc3333);
+}
+
+button.escape:active {
+  background-color: #aa2222;
+  background-image: linear-gradient(180deg, #991111, #aa2222 30%, #cc3333);
+}
+
+/**
+ * Inverted
+ */
+
+button.invert {
+  background-color: #eeeeee;
+  background-image: linear-gradient(0deg, #eeeeee, #ffffff);
+  color: #333333;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+button.invert:hover {
+  background-color: #dddddd;
+  background-image: linear-gradient(0deg, #dddddd, #eeeeee 30%, #ffffff);
+}
+
+button.invert:active {
+  background-color: #eeeeee;
+  background-image: linear-gradient(180deg, #dddddd, #eeeeee 30%, #ffffff);
+}
+
+button.invert:not(.accent):not(.notice):not(.accept):not(.escape) {
+  background-color: #222222;
+  background-image: linear-gradient(0deg, #222222, #333333);
+  border-color: #333333;
+  color: #eeeeee;
+  text-shadow: 0 1px 0 #111111;
+}
+
+button.invert:not(.accent):not(.notice):not(.accept):not(.escape):hover {
+  background-color: #555555;
+  background-image: linear-gradient(0deg, #444444, #555555 30%, #666666);
+}
+
+button.invert:not(.accent):not(.notice):not(.accept):not(.escape):active {
+  background-color: #333333;
+  background-image: linear-gradient(180deg, #444444, #555555 30%, #666666);
+}
+
+button.accent.invert {
+  color: #2222bb;
+}
+
+button.notice.invert {
+  color: #cc9922;
+}
+
+button.accept.invert {
+  color: #22bb22;
+}
+
+button.escape.invert {
+  color: #bb2222;
+}
+
+/**
+ * Size
+ */
+
+button.smallest, .group.smallest {
+  font-size: 0.5em;
+}
+
+button.smaller, .group.smaller {
+  font-size: 0.6em;
+}
+
+button.small, .group.small {
+  font-size: 0.75em;
+}
+
+button.large, .group.large {
+  font-size: 1.2em;
+}
+
+button.larger, .group.larger {
+  font-size: 1.6em;
+}
+
+button.largest, .group.largest {
+  font-size: 2em;
+}
+
+/**
+ * Disabled
+ */
+
+button[disabled], button.disabled {
+  background-color: #eeeeee !important;
+  background-image: linear-gradient(0deg, #cccccc, #ffffff) !important;
+  color: #999999 !important;
+  cursor: default !important;
+  text-shadow: 0 1px 0 #ffffff !important;
+}
+
+/**
+ * Flat, must follow disabled in style sheet
+ */
+
+button.flat {
+  background-image: none !important;
+  text-shadow: none !important;
+}
+
+/**
+ * Shape and grouped
+ */
+
+button.round {
+  border-radius: 1em;
+  height: 2em;
+  line-height: 0;
+  padding: 0.5em 0;
+  text-align: center;
+  width: 2em;
+  overflow: hidden;
+}
+
+button.pill {
+  border-radius: 1em;
+}
+
+button.square, .group button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.group {
+  display: inline-table;
+}
+
+.group button {
+  display: table-cell;
+  border-color: #cccccc !important;
+  border-right-width: 0;
+}
+
+.group button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.group button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-right-width: 1px;
+}

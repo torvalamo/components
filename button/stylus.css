@@ -1,0 +1,366 @@
+button,
+.button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  background-color: #eee;
+  background-image: linear-gradient(0deg, #eee, #fff);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #333;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0;
+  outline: 0;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  transition: background 0.2s;
+}
+button:hover,
+.button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+  background-color: #ddd;
+  background-image: linear-gradient(0deg, #ddd, #eee 30%, #fff);
+  cursor: pointer;
+}
+button:active,
+.button:active,
+input[type=button]:active,
+input[type=reset]:active,
+input[type=submit]:active {
+  background-color: #eee;
+  background-image: linear-gradient(180deg, #ddd, #eee 30%, #fff);
+  transition: background 0s;
+}
+button.accent,
+.button.accent,
+input[type=button].accent,
+input[type=reset].accent,
+input[type=submit].accent {
+  background-color: #55d;
+  background-image: linear-gradient(0deg, #55d, #66f);
+  border-color: #55d;
+  color: #fff;
+  text-shadow: 0 1px 0 #339;
+}
+button.accent:hover,
+.button.accent:hover,
+input[type=button].accent:hover,
+input[type=reset].accent:hover,
+input[type=submit].accent:hover {
+  background-color: #44c;
+  background-image: linear-gradient(0deg, #44c, #55d 30%, #66f);
+}
+button.accent:active,
+.button.accent:active,
+input[type=button].accent:active,
+input[type=reset].accent:active,
+input[type=submit].accent:active {
+  background-color: #55d;
+  background-image: linear-gradient(180deg, #44c, #55d 30%, #66f);
+}
+button.notice,
+.button.notice,
+input[type=button].notice,
+input[type=reset].notice,
+input[type=submit].notice {
+  background-color: #da5;
+  background-image: linear-gradient(0deg, #da5, #fc6);
+  border-color: #da5;
+  color: #fff;
+  text-shadow: 0 1px 0 #963;
+}
+button.notice:hover,
+.button.notice:hover,
+input[type=button].notice:hover,
+input[type=reset].notice:hover,
+input[type=submit].notice:hover {
+  background-color: #c94;
+  background-image: linear-gradient(0deg, #c94, #da5 30%, #fc6);
+}
+button.notice:active,
+.button.notice:active,
+input[type=button].notice:active,
+input[type=reset].notice:active,
+input[type=submit].notice:active {
+  background-color: #da5;
+  background-image: linear-gradient(180deg, #c94, #da5 30%, #fc6);
+}
+button.accept,
+.button.accept,
+input[type=button].accept,
+input[type=reset].accept,
+input[type=submit].accept {
+  background-color: #2a2;
+  background-image: linear-gradient(0deg, #2a2, #3c3);
+  border-color: #2a2;
+  color: #fff;
+  text-shadow: 0 1px 0 #060;
+}
+button.accept:hover,
+.button.accept:hover,
+input[type=button].accept:hover,
+input[type=reset].accept:hover,
+input[type=submit].accept:hover {
+  background-color: #191;
+  background-image: linear-gradient(0deg, #191, #2a2 30%, #3c3);
+}
+button.accept:active,
+.button.accept:active,
+input[type=button].accept:active,
+input[type=reset].accept:active,
+input[type=submit].accept:active {
+  background-color: #2a2;
+  background-image: linear-gradient(180deg, #191, #2a2 30%, #3c3);
+}
+button.escape,
+.button.escape,
+input[type=button].escape,
+input[type=reset].escape,
+input[type=submit].escape {
+  background-color: #a22;
+  background-image: linear-gradient(0deg, #a22, #c33);
+  border-color: #a22;
+  color: #fff;
+  text-shadow: 0 1px 0 #600;
+}
+button.escape:hover,
+.button.escape:hover,
+input[type=button].escape:hover,
+input[type=reset].escape:hover,
+input[type=submit].escape:hover {
+  background-color: #911;
+  background-image: linear-gradient(0deg, #911, #a22 30%, #c33);
+}
+button.escape:active,
+.button.escape:active,
+input[type=button].escape:active,
+input[type=reset].escape:active,
+input[type=submit].escape:active {
+  background-color: #a22;
+  background-image: linear-gradient(180deg, #911, #a22 30%, #c33);
+}
+button.invert,
+.button.invert,
+input[type=button].invert,
+input[type=reset].invert,
+input[type=submit].invert {
+  background-color: #eee;
+  background-image: linear-gradient(0deg, #eee, #fff);
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+}
+button.invert:hover,
+.button.invert:hover,
+input[type=button].invert:hover,
+input[type=reset].invert:hover,
+input[type=submit].invert:hover {
+  background-color: #ddd;
+  background-image: linear-gradient(0deg, #ddd, #eee 30%, #fff);
+}
+button.invert:active,
+.button.invert:active,
+input[type=button].invert:active,
+input[type=reset].invert:active,
+input[type=submit].invert:active {
+  background-color: #eee;
+  background-image: linear-gradient(180deg, #ddd, #eee 30%, #fff);
+}
+button.invert:not(.accent):not(.notice):not(.accept):not(.escape),
+.button.invert:not(.accent):not(.notice):not(.accept):not(.escape),
+input[type=button].invert:not(.accent):not(.notice):not(.accept):not(.escape),
+input[type=reset].invert:not(.accent):not(.notice):not(.accept):not(.escape),
+input[type=submit].invert:not(.accent):not(.notice):not(.accept):not(.escape) {
+  background-color: #222;
+  background-image: linear-gradient(0deg, #222, #333);
+  border-color: #333;
+  color: #eee;
+  text-shadow: 0 1px 0 #111;
+}
+button.invert:not(.accent):not(.notice):not(.accept):not(.escape):hover,
+.button.invert:not(.accent):not(.notice):not(.accept):not(.escape):hover,
+input[type=button].invert:not(.accent):not(.notice):not(.accept):not(.escape):hover,
+input[type=reset].invert:not(.accent):not(.notice):not(.accept):not(.escape):hover,
+input[type=submit].invert:not(.accent):not(.notice):not(.accept):not(.escape):hover {
+  background-color: #555;
+  background-image: linear-gradient(0deg, #444, #555 30%, #666);
+}
+button.invert:not(.accent):not(.notice):not(.accept):not(.escape):active,
+.button.invert:not(.accent):not(.notice):not(.accept):not(.escape):active,
+input[type=button].invert:not(.accent):not(.notice):not(.accept):not(.escape):active,
+input[type=reset].invert:not(.accent):not(.notice):not(.accept):not(.escape):active,
+input[type=submit].invert:not(.accent):not(.notice):not(.accept):not(.escape):active {
+  background-color: #333;
+  background-image: linear-gradient(180deg, #444, #555 30%, #666);
+}
+button.accent.invert,
+.button.accent.invert,
+input[type=button].accent.invert,
+input[type=reset].accent.invert,
+input[type=submit].accent.invert {
+  color: #55d;
+}
+button.notice.invert,
+.button.notice.invert,
+input[type=button].notice.invert,
+input[type=reset].notice.invert,
+input[type=submit].notice.invert {
+  color: #da5;
+}
+button.accept.invert,
+.button.accept.invert,
+input[type=button].accept.invert,
+input[type=reset].accept.invert,
+input[type=submit].accept.invert {
+  color: #2a2;
+}
+button.escape.invert,
+.button.escape.invert,
+input[type=button].escape.invert,
+input[type=reset].escape.invert,
+input[type=submit].escape.invert {
+  color: #a22;
+}
+button[disabled],
+.button[disabled],
+input[type=button][disabled],
+input[type=reset][disabled],
+input[type=submit][disabled],
+button.disabled,
+.button.disabled,
+input[type=button].disabled,
+input[type=reset].disabled,
+input[type=submit].disabled {
+  background-color: #eee !important;
+  background-image: linear-gradient(0deg, #ccc, #fff) !important;
+  background-image: linear-gradient(0deg, #eee, #fff) !important;
+  color: #999 !important;
+  cursor: default !important;
+  text-shadow: 0 1px 0 #fff !important;
+}
+button.flat,
+.button.flat,
+input[type=button].flat,
+input[type=reset].flat,
+input[type=submit].flat {
+  background-image: none !important;
+  text-shadow: none !important;
+}
+button.round,
+.button.round,
+input[type=button].round,
+input[type=reset].round,
+input[type=submit].round {
+  border-radius: 1em;
+  height: 2em;
+  line-height: 0;
+  padding: 0.5em 0;
+  text-align: center;
+  width: 2em;
+  overflow: hidden;
+}
+button.pill,
+.button.pill,
+input[type=button].pill,
+input[type=reset].pill,
+input[type=submit].pill {
+  border-radius: 1em;
+}
+button.square,
+.button.square,
+input[type=button].square,
+input[type=reset].square,
+input[type=submit].square,
+.group button:not(:first-child):not(:last-child),
+.group .button:not(:first-child):not(:last-child),
+.group input[type=button]:not(:first-child):not(:last-child),
+.group input[type=reset]:not(:first-child):not(:last-child),
+.group input[type=submit]:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.group {
+  display: inline-table;
+}
+.group button,
+.group .button,
+.group input[type=button],
+.group input[type=reset],
+.group input[type=submit] {
+  display: table-cell;
+  border-color: #ccc !important;
+  border-right-width: 0;
+}
+.group button:first-child,
+.group .button:first-child,
+.group input[type=button]:first-child,
+.group input[type=reset]:first-child,
+.group input[type=submit]:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.group button:last-child,
+.group .button:last-child,
+.group input[type=button]:last-child,
+.group input[type=reset]:last-child,
+.group input[type=submit]:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-right-width: 1px;
+}
+button.smallest,
+.button.smallest,
+input[type=button].smallest,
+input[type=reset].smallest,
+input[type=submit].smallest,
+.group.smallest > * {
+  font-size: 0.5em;
+}
+button.smaller,
+.button.smaller,
+input[type=button].smaller,
+input[type=reset].smaller,
+input[type=submit].smaller,
+.group.smaller > * {
+  font-size: 0.6em;
+}
+button.small,
+.button.small,
+input[type=button].small,
+input[type=reset].small,
+input[type=submit].small,
+.group.small > * {
+  font-size: 0.75em;
+}
+button.large,
+.button.large,
+input[type=button].large,
+input[type=reset].large,
+input[type=submit].large,
+.group.large > * {
+  font-size: 1.2em;
+}
+button.larger,
+.button.larger,
+input[type=button].larger,
+input[type=reset].larger,
+input[type=submit].larger,
+.group.larger > * {
+  font-size: 1.6em;
+}
+button.largest,
+.button.largest,
+input[type=button].largest,
+input[type=reset].largest,
+input[type=submit].largest,
+.group.largest > * {
+  font-size: 2em;
+}
+

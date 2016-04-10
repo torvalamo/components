@@ -1,0 +1,93 @@
+<!doctype html>
+<style>
+  body {
+  font-size: 16px;
+  font-family: Helvetica;
+}
+
+h1 {
+  font-size: 1.3em;
+}
+</style>
+<link href="stylus.css" rel="stylesheet">
+
+<p>Buttons are generally font-family and font-size agnostic. They adapt to the parent fonts and font sizes.</p>
+
+<h1>Color</h1>
+<p>This shows how important it is or what function it has in terms of the work flow.</p>
+<button>Normal</button>
+<button class="accent">Accent</button>
+<button class="notice">Notice</button>
+<button class="accept">Accept</button>
+<button class="escape">Escape</button>
+
+<h1>Inverted</h1>
+<p>Reverses the colors of background and text.</p>
+<button class="invert">Invert</button>
+<button class="accent invert">Accent Invert</button>
+<button class="notice invert">Notice Invert</button>
+<button class="accept invert">Accept Invert</button>
+<button class="escape invert">Escape Invert</button>
+
+<h1>Size</h1>
+<button class="smallest">Smallest (0.5x)</button>
+<button class="smaller">Smaller (0.6x)</button>
+<button class="small">Small (0.75x)</button>
+<button>Normal (0.9x)</button>
+<button class="large">Large (1.2x)</button>
+<button class="larger">Larger (1.6x)</button>
+<button class="largest">Largest (2x)</button>
+
+<h1>Shapes</h1>
+<p>Shape your buttons. Here are some pill shaped ones.</p>
+<button class="pill">Pill</button>
+<button class="pill accept">Pill Accept</button>
+<p>Squares?</p>
+<button class="square accent">Square Accent</button>
+<button class="square invert notice">Square Invert Notice</button>
+<p>Create round buttons. Here combined with colors and size.</p>
+<button class="round smaller accent">XS</button>
+<button class="round small notice">S</button>
+<button class="round invert">M</button>
+<button class="round large accept">L</button>
+<button class="round larger escape">XL</button>
+<button class="round largest escape invert">XXL</button>
+
+<h1>Flat</h1>
+<p>Non-gradient</p>
+<button class="flat">Flat</button>
+<button class="accent flat">Accent Flat</button>
+<button class="notice larger round flat">No</button>
+<button class="escape larger round invert flat">Es</button>
+<button class="invert flat">Invert Flat</button>
+<button class="accept invert flat">Accept Invert Flat</button>
+
+<h1>Disabled</h1>
+<p>When a button has a disabled attribute or class. Has default cursor.</p>
+<button class="disabled">Unclassed</button>
+<button class="notice" disabled>Notice Disabled</button>
+<button class="invert disabled">Invert Disabled</button>
+<button class="accent flat disabled">Accent Flat Disabled</button>
+<button class="accent invert flat disabled">Accent Invert Flat Disabled</button>
+<button class="round larger accept disabled">A</button>
+
+<h1>Grouped</h1>
+<p>Group buttons together to form bars of buttons using span class=group. Size classes can be added to the span and it will apply to all the buttons.</p>
+<span class="group large">
+  <button>File</button>
+  <button>Edit</button>
+  <button class="invert">Data</button>
+  <button class="invert accent">Data</button>
+  <button class="flat">Data</button>
+  <button class="escape">Help</button>
+</span> inline text 
+<span class="group">
+  <button>Back</button>
+  <button>Forward</button>
+</span>
+<span class="group larger">
+  <a href class="button">This</a>
+  <a href class="button">Group</a>
+  <a href class="button disabled">Is</a>
+  <a href class="button">Larger</a>
+</span>
